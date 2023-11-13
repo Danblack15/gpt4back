@@ -15,7 +15,7 @@ app.use(express.json());
 
 mongoose
     .connect(
-        "mongodb+srv://admin:admin@cluster0.bdnr78s.mongodb.net/?retryWrites=true&w=majority"
+        process.env.DB_CONNECT
     ).then(() => {
         console.log('Connected to database');
     }).catch((err) => {
