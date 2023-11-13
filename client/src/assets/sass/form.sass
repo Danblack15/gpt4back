@@ -1,0 +1,45 @@
+.form__input-wrapper
+    position: relative
+    & + .form__input-wrapper
+        margin-top: 20px
+
+.form__input,
+.form__textarea
+    width: 100%
+    padding: 24px 0 22px 32px
+    background: #052D56
+    border-radius: 5px
+    border: 1px solid transparent
+    color: $white
+    transition: $trs
+    
+    @media (max-width: $tab-sm)
+        padding: 16px 0 16px 20px
+
+    &:hover
+        background: #083b6e
+    &:focus
+        background: #083b6e
+        border: 1px solid $orange
+    &:placeholder
+        color: #92AAC1
+    &.error
+
+.form__label
+    display: block
+    font-size: 16px
+    line-height: 110%
+    margin-bottom: 10px
+    @media (max-width: $tab)
+        font-size: 14px
+
+.form__error
+    position: absolute
+    top: calc(100% + 4px)
+    right: 0
+    color: $orange
+    font-size: 14px
+    line-height: 110%
+    @media (max-width: $tab)
+        top: calc(100% + 2px)
+        font-size: 12px

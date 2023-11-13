@@ -1,0 +1,73 @@
+.btn
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: $trs background, $trs color, $trs border
+    cursor: pointer
+    .btn__text
+        white-space: nowrap
+        color: $white
+
+.btn--orange
+    background: $orange
+    color: $white
+    padding: 16px 20px
+    border-radius: 5px
+
+    @media (max-width: $desktop-sm)
+        padding: 12px 16px
+
+    @media (max-width: $tab-sm)
+        padding: 12px
+
+    &:hover
+        background: $purple
+
+.btn--dark
+    background: $black
+    color: $white
+    padding: 13px 62px 15px 62px
+    border-radius: 40px
+    line-height: 1.66
+
+    @media (max-width: $tab-sm)
+        padding: 13px 42px
+
+    &:hover
+        background: $purple
+
+.btn--transparent
+    background: transparent
+    color: rgba($white, .5)
+    padding: 20px
+    border: 1px solid $white
+
+    @media (max-width: $tab-sm)
+        padding: 16px
+
+    &:hover
+        color: $white
+        background: $black
+        border: 1px solid transparent
+    
+.btn--close
+    position: relative
+    height: 40px
+    width: 40px
+    &:before, &:after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform-origin: center
+        transition-duration: inherit
+        transition-timing-function: ease
+        width: 30px
+        height: 3px
+        border-radius: 20px
+        background-color: $black
+    &:before
+        transform: translate(-50%, -50%) rotate(45deg)
+    &:after
+        transform: translate(-50%, -50%) rotate(135deg)
+    
